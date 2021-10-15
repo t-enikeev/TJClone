@@ -1,0 +1,29 @@
+
+.wrapper {
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  min-height: 48px;
+  margin-top: 15px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+&:hover {
+  background-color: #ffffff;
+  border-color: deepskyblue;
+}
+}
+.fieldRoot {
+  cursor: pointer;
+  padding: 17px !important;
+  &:after, &:before {
+    display: none;
+  }
+}
+.formFooter {
+  padding: 17px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .addButton {
+
+  }
+}
