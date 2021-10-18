@@ -19,7 +19,6 @@ const AddCommentForm: React.FC<AddCommentFormProps> = () => {
         classes={{ root: styles.fieldRoot }}
         onChange={(e) => {
           setText(e.target.value);
-          console.log(e.target.value);
         }}
         value={text}
         minRows={clicked ? 2 : 1}

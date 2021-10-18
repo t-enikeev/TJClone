@@ -1,6 +1,10 @@
 import React from "react";
 import { Typography, IconButton, MenuItem, Menu } from "@material-ui/core";
-import MoreIcon from "@material-ui/icons/MoreHorizOutlined";
+import {
+  KeyboardArrowDown,
+  KeyboardArrowUp,
+  MoreHoriz,
+} from "@material-ui/icons";
 
 import styles from "./Comment.module.scss";
 
@@ -36,12 +40,16 @@ export const Comment: React.FC<CommentPostProps> = ({
         <img src={user.avatar} alt="Avatar" />
         <b>{user.fullname}</b>
         <span>{createdAt}</span>
-        <span className={styles.likes}>{likes ? `+${likes}` : "0"}</span>
+        <div className={styles.likeContainer}>
+          <KeyboardArrowDown className={styles.btn} />
+          <span className={styles.likes}>{likes ? `+${likes}` : "0"}</span>
+          <KeyboardArrowUp className={styles.btn} />
+        </div>
       </div>
       <Typography className={styles.text}>{text}</Typography>
       <span className={styles.replyBtn}>Ответить</span>
       <IconButton onClick={handleClick}>
-        <MoreIcon />
+        <MoreHoriz />
       </IconButton>
       <Menu
         anchorEl={anchorEl}

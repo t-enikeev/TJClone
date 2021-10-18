@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import styles from "PostComments.module.scss";
 import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
+
 import { Comment } from "../Comment";
 import AddCommentForm from "../AddCommentForm";
 import data from "./data";
 
-// type IComment = {
-//   text: string;
-//   id: number;
-//   createdAt: string;
-//   user: {
-//     fullname: string;
-//     avatar: string;
-//   };
-// };
+type IComment = {
+  text: string;
+  likes: number;
+  id: number;
+  createdAt: string;
+  user: {
+    fullname: string;
+    avatar: string;
+  };
+};
 //
 // interface PostCommentsProps {
 //   items: IComment[];
@@ -21,22 +23,26 @@ import data from "./data";
 
 export const PostComments: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const comments = data.comments;
+
+  const comments = data.comments[activeTab ? "ordered" : "popular"];
+
   return (
     <Paper elevation={0} className="mt-40 p-30">
       <div className="container">
         <Typography variant="h6" className="mb-20">
-          42 комментария
+          Всего комментариев: {comments.length}
         </Typography>
         <Tabs
           className="mt-20"
           value={activeTab}
-          onChange={(_, newValue) => setActiveTab(newValue)}
+          onChange={(_, newValue) => {
+            setActiveTab(newValue);
+          }}
           indicatorColor="primary"
           textColor="primary"
         >
-          <Tab label="Популярные" value={0} />
-          <Tab label="По порядку" value={1} />
+          <Tab label="Популярные" />
+          <Tab label="По порядку" />
         </Tabs>
         <Divider />
         <AddCommentForm />
