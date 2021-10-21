@@ -4,7 +4,7 @@ import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
 
 import { Comment } from "../Comment";
 import AddCommentForm from "../AddCommentForm";
-import data from "./data";
+import data from "../../data";
 
 type IComment = {
   text: string;

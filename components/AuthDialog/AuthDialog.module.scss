@@ -1,0 +1,48 @@
+
+
+.content {
+  width: 60%;
+  margin: 30px 0 30px auto;
+  .title {
+    font-size: 18px;
+    color: black !important;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  .backTitle {
+    display: flex;
+    align-items: center;
+    button {
+      &:hover {
+        background-color: transparent !important;
+      }
+    svg {
+      margin-right: 5px;
+    }
+    }
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    &:hover {
+      color: #4783d9;
+    }
+  }
+  .authVariants {
+  position: relative;
+  svg {
+    position: absolute;
+    left: 15px;
+
+  }
+}
+  .miniButtons {
+    display: flex;
+    justify-content: space-between;
+    button {
+    &:nth-last-of-type(2) {
+      margin: 0 20px;
+    }
+    }
+  }
+}
