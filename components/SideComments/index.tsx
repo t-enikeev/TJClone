@@ -61,7 +61,7 @@ export const SideComments = () => {
       <h3 onClick={toggleVisibility}>
         Комментарии <ArrowRightIcon />
       </h3>
-      {visible && comments.map((obj) => <CommentItem {...obj} />)}
+      {visible && comments.map((obj) => <CommentItem key={obj.id} {...obj} />)}
     </div>
   );
 };

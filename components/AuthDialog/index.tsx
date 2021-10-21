@@ -18,9 +18,14 @@ interface AuthDialogProps {
 }
 
 export const AuthDialog: React.FC<AuthDialogProps> = ({ onClose }) => {
-  const [formType, setFormType] = useState<"main" | "email">("main");
-  const handleEmailAuthOpen = () => {
-    setFormType("email");
+  const [formType, setFormType] = useState<"main" | "login" | "register">(
+    "main"
+  );
+  const handleLoginOpen = () => {
+    setFormType("login");
+  };
+  const handleRegisterOpen = () => {
+    setFormType("register");
   };
   const handleMainAuth = () => {
     setFormType("main");
@@ -36,22 +41,9 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({ onClose }) => {
       <DialogContent>
         <DialogContentText>
           <div className={styles.content}>
-            <Typography className={styles.title}>
-              {formType === "main" ? (
-                "Вход в RJ"
-              ) : (
-                <>
-                  <p className={styles.backTitle}>
-                    <Button onClick={handleMainAuth}>
-                      <ArrowBack />
-                    </Button>
-                    Вход через почту
-                  </p>
-                </>
-              )}
-            </Typography>
             {formType === "main" && (
               <>
+                <Typography className={styles.title}>Вход в RJ</Typography>
                 <div className={styles.authVariants}>
                   <Button className="mb-15" variant="contained" fullWidth>
                     <svg fill="none" viewBox="0 0 24 24" id="v_vkontakte">
@@ -90,7 +82,7 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({ onClose }) => {
                     Google
                   </Button>
                   <Button
-                    onClick={handleEmailAuthOpen}
+                    onClick={handleLoginOpen}
                     className="mb-15"
                     variant="contained"
                     fullWidth
@@ -138,8 +130,30 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({ onClose }) => {
                 </div>
               </>
             )}
-            {formType === "email" && (
+            {formType === "login" && (
               <>
+                <Typography className={styles.title}>
+                  <p className={styles.backTitle}>
+                    <Button onClick={handleMainAuth}>
+                      <ArrowBack />
+                    </Button>
+                    Вход через почту
+                  </p>
+                  <div className={styles.registrationButton}>
+                    <span>или</span>
+                    <Button
+                      onClick={handleRegisterOpen}
+                      color="primary"
+                      variant="text"
+                    >
+                      зарегистрироваться
+                    </Button>
+                  </div>
+                  {/**/}
+                  {/*  */}
+                  {/*  */}
+                  {/*  */}
+                </Typography>
                 <form>
                   <TextField
                     className="mb-20"
@@ -162,6 +176,11 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({ onClose }) => {
                     Войти
                   </Button>
                 </form>
+              </>
+            )}
+            {formType === "register" && (
+              <>
+                <Typography className={styles.title}>POOOOOFFF</Typography>
               </>
             )}
           </div>
