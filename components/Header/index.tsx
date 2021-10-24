@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/static/img/logo.svg";
+import styles from "Header.module.scss";
 
 import {
   Paper,
@@ -27,7 +28,6 @@ import {
   AccountCircleOutlined,
 } from "@material-ui/icons";
 
-import styles from "./Header.module.scss";
 import { AuthDialog } from "../AuthDialog";
 
 export const Header: React.FC = () => {
