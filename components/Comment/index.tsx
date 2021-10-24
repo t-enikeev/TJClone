@@ -5,6 +5,7 @@ import {
   KeyboardArrowUp,
   MoreHoriz,
 } from "@material-ui/icons";
+import Image from "next/image";
 
 import styles from "./Comment.module.scss";
 
@@ -37,7 +38,7 @@ export const Comment: React.FC<CommentPostProps> = ({
   return (
     <div className={styles.comment}>
       <div className={styles.userInfo}>
-        <img src={user.avatar} alt="Avatar" />
+        <Image src={user.avatar} alt="Avatar" />
         <b>{user.fullname}</b>
         <span>{createdAt}</span>
         <div className={styles.likeContainer}>

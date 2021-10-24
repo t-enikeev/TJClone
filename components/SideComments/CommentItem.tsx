@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SideComments.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CommentItemProps {
   user: {
@@ -22,7 +23,7 @@ export const CommentItem: React.FC<CommentItemProps> = ({
   return (
     <div className={styles.commentItem}>
       <div className={styles.userInfo}>
-        <img src="https://leonardo.osnova.io/598fc957-a3f6-598c-b6f9-a033c3941d12/-/scale_crop/64x64/-/format/webp/" />
+        <Image src="https://leonardo.osnova.io/598fc957-a3f6-598c-b6f9-a033c3941d12/-/scale_crop/64x64/-/format/webp/" />
         <Link href={`/profile/${user.id}`}>
           <a>
             <b>{user.fullname}</b>

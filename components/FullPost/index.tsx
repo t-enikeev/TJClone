@@ -3,6 +3,7 @@ import React from "react";
 import { PostActions } from "../PostActions";
 import MessageIcon from "@material-ui/icons/TextsmsOutlined";
 import UserAddIcon from "@material-ui/icons/PersonAddOutlined";
+import Image from "next/image";
 
 import styles from "./FullPost.module.scss";
 
@@ -41,7 +42,7 @@ export const FullPost = () => {
           </div>
           <div className="d-flex justify-between align-center mt-30 mb-30">
             <div className={styles.userInfo}>
-              <img
+              <Image
                 src="https://leonardo.osnova.io/104b03b4-5173-fd9f-2af9-b458dddc4a23/-/scale_crop/108x108/-/format/webp/"
                 alt="Avatar"
               />
