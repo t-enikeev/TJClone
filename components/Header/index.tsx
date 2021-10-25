@@ -2,22 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/static/img/logo.svg";
-import styles from "Header.module.scss";
+import styles from "./Header.module.scss";
 
-import {
-  Paper,
-  Button,
-  IconButton,
-  Avatar,
-  DialogActions,
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogContentText,
-  useMediaQuery,
-  useTheme,
-  Typography,
-} from "@material-ui/core";
+import { Paper, Button, IconButton } from "@material-ui/core";
 import {
   SearchOutlined as SearchIcon,
   CreateOutlined as PenIcon,
@@ -47,7 +34,7 @@ export const Header: React.FC = () => {
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <Link href="/">
+        <Link href="/" as={`/`}>
           <a>
             <Image height={35} className="mr-20" src={logo} alt="Logo" />
           </a>
@@ -58,7 +45,7 @@ export const Header: React.FC = () => {
           <input placeholder="Поиск" />
         </div>
 
-        <Link href="/write">
+        <Link href="/write" as={`/write`}>
           <Button variant="contained" className={styles.penButton}>
             Новая запись
           </Button>
@@ -71,17 +58,6 @@ export const Header: React.FC = () => {
         <IconButton>
           <NotificationIcon />
         </IconButton>
-
-        {/*<Link href="/profile/1">*/}
-        {/*  <a className="d-flex align-center">*/}
-        {/*    <Avatar*/}
-        {/*      className={styles.avatar}*/}
-        {/*      alt="Remy Sharp"*/}
-        {/*      src="https://leonardo.osnova.io/5ffeac9a-a0e5-5be6-98af-659bfaabd2a6/-/scale_crop/108x108/-/format/webp/"*/}
-        {/*    />*/}
-        {/*    <ArrowBottom />*/}
-        {/*  </a>*/}
-        {/*</Link>*/}
 
         <Button className={styles.loginButton} onClick={openAuthDialog}>
           <AccountCircleOutlined />
