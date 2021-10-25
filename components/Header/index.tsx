@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import logo from "/public/static/img/logo.svg";
 import styles from "./Header.module.scss";
 
@@ -36,7 +35,12 @@ export const Header: React.FC = () => {
         </IconButton>
         <Link href="/" as={`/`}>
           <a>
-            <Image height={35} className="mr-20" src={logo} alt="Logo" />
+            <img
+              height={35}
+              className="mr-20"
+              src={"/static/img/logo.svg"}
+              alt="Logo"
+            />
           </a>
         </Link>
 

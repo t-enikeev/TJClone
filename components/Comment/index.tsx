@@ -38,7 +38,7 @@ export const Comment: React.FC<CommentPostProps> = ({
   return (
     <div className={styles.comment}>
       <div className={styles.userInfo}>
-        <Image src={user.avatar} alt="Avatar" />
+        <img src={user.avatar} alt="Avatar" />
         <b>{user.fullname}</b>
         <span>{createdAt}</span>
         <div className={styles.likeContainer}>
