@@ -1,5 +1,4 @@
 module.exports = {
-  basePath: "/TJClone",
   assetPrefix: ".",
   reactStrictMode: true,
   images: {

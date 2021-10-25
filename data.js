@@ -18,6 +18,22 @@ module.exports = {
         },
       },
       {
+        id: 4,
+        user: {
+          fullname: "Федор Иванов",
+          avatar:
+            "https://leonardo.osnova.io/104b03b4-5173-fd9f-2af9-b458dddc4a23/-/scale_crop/108x108/-/format/webp/",
+        },
+        createdAt: new Date().toString(),
+        text:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis libero ac bibendum pellentesque. Curabitur suscipit enim quis risus elementum.\n" +
+          "\n",
+        likes: 18,
+        post: {
+          title: "Какая у вас дома ванна?",
+        },
+      },
+      {
         id: 1,
         user: {
           fullname: "Вася Пупкин",
