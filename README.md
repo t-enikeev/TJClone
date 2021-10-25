@@ -1,4 +1,4 @@
-https://redchrysler.github.io/TSClone/
+https://redchrysler.github.io/TJClone/
 
 Project based on NextJS.
 Used technologies:
