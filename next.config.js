@@ -1,6 +1,6 @@
 module.exports = {
   basePath: "/TJClone",
-  assetPrefix: "/",
+  assetPrefix: ".",
   reactStrictMode: true,
   images: {
     domains: ["leonardo.osnova.io"],
