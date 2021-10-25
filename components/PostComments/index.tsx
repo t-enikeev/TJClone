@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import styles from "PostComments.module.scss";
 import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
 
 import { Comment } from "../Comment";
 import AddCommentForm from "../AddCommentForm";
 import data from "../../data";
-
 type IComment = {
   text: string;
   likes: number;

@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import logo from "/public/static/img/logo.svg";
 import styles from "./Header.module.scss";
 
 import { Paper, Button, IconButton } from "@material-ui/core";
@@ -38,7 +37,7 @@ export const Header: React.FC = () => {
             <img
               height={35}
               className="mr-20"
-              src={"/static/img/logo.svg"}
+              src={"./static/img/logo.svg"}
               alt="Logo"
             />
           </a>
