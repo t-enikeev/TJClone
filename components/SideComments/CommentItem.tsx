@@ -23,10 +23,6 @@ export const CommentItem: React.FC<CommentItemProps> = ({
   return (
     <div className={styles.commentItem}>
       <div className={styles.userInfo}>
-        <Image
-          src="https://leonardo.osnova.io/598fc957-a3f6-598c-b6f9-a033c3941d12/-/scale_crop/64x64/-/format/webp/"
-          layout={"fill"}
-        />
         <Link href={`/profile/${user.id}`}>
           <a>
             <b>{user.fullname}</b>
